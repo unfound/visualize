@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
+import useWindowResize from '../utils/useWindowResize'
 
 const vertex = `
   attribute vec2 position;
@@ -65,6 +66,10 @@ onMounted(() => {
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.TRIANGLES, 0, points.length / 2)
   }
+})
+
+useWindowResize(() => {
+  console.log('resizde')
 })
 
 </script>
