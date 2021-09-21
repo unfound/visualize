@@ -23,6 +23,12 @@ const routes = [
   }, {
     path: '/shaping-functions',
     component: () => import('../page/ShapingFunctions.vue')
+  }, {
+    path: '/render-colors',
+    component: () => import('../page/RenderColors.vue')
+  }, {
+    path: '/star',
+    component: () => import('../page/Star.vue')
   }
 ]
 
