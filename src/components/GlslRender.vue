@@ -27,5 +27,5 @@ onMounted(() => {
 </script>
 
 <template>
-    <canvas ref="canvas" :height="height" :width="width" class="mr-4"></canvas>
+    <canvas ref="canvas" :height="height" :width="width" class="mr-4 mb-4"></canvas>
 </template>
