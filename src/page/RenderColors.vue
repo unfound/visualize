@@ -25,6 +25,6 @@ import radar from '../shaders/radar.frag?raw'
     <GlslRender height="200" width="200" :shader="circle2"/>
     <GlslRender height="200" width="200" :shader="polar"/>
     <GlslRender height="200" width="200" :shader="fieldPolar"/>
-    <GlslRender height="200" width="200" :shader="radar"/>
+    <GlslRender height="800" width="800" :shader="radar"/>
   </div>
 </template>

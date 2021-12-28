@@ -1,6 +1,7 @@
+import type { RouteRecordRaw } from 'vue-router'
 import HelloWorld from '../page/HelloWorld.vue'
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: HelloWorld
@@ -29,6 +30,19 @@ const routes = [
   }, {
     path: '/star',
     component: () => import('../page/Star.vue')
+  }, {
+    path: '/animator',
+    component: () => import('../page/Animator.vue')
+  }, {
+    path: '/webgl-cookbook',
+    component: () => import('../page/webgl-cookbook/index.vue'),
+    redirect: '/webgl-cookbook/clicked-points',
+    children: [
+      {
+        path: 'clicked-points',
+        component: () => import('../page/webgl-cookbook/ch02/ClickedPoints.vue')
+      }
+    ]
   }
 ]
 

@@ -9,3 +9,7 @@ declare module '*.vue' {
 
 declare module 'glslCanvas';
 declare module 'gl-renderer';
+
+interface WebGLRenderingContext {
+  program?: WebGLProgram;
+}
