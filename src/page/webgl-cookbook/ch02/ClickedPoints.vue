@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { getWebGLContext, initShaders } from '../../../utils/webglUtils'
 import {} from '../../../utils/matrix'
+import MyWorker from './worker?worker'
 
 const canvas = ref<HTMLCanvasElement | null>(null)
 const Vshader_source = `
@@ -108,6 +109,12 @@ function openIndexedDB (databaseName: string, version?: number) {
 }
 openIndexedDB('zoom')
 
+const myWorker = new MyWorker()
+myWorker.postMessage(1)
+myWorker.onmessage = function (e) {
+    console.log('主线程')
+    console.log(e.data)
+}
 </script>
 
 <template>
