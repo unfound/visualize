@@ -43,6 +43,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('../page/webgl-cookbook/ch02/ClickedPoints.vue')
       }
     ]
+  }, {
+    path: '/svg',
+    component: () => import('../page/svg/index.vue')
+  }, {
+    path: '/counter-down',
+    component: () => import('../page/CounterDown/index.vue')
   }
 ]
 
