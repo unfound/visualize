@@ -72,7 +72,7 @@ onBeforeUnmount(() => {
         <div class="flex-auto flex items-center justify-center">
             <button
                 class="bg-blue-500 text-white w-14 py-1 text-center rounded-sm focus:outline-none active:bg-blue-600"
-                :class="{'bg-gray-400 active:bg-gray-400': time > 0}"
+                :class="{'bg-gray-400 active:bg-gray-400 cursor-not-allowed': time > 0 || card.loading}"
                 @click="getCard(card)"
             >{{ time > 0 ? `${time}s` : card.loading ? '购买中' : '抢购' }}</button>
         </div>
